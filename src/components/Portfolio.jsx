@@ -43,7 +43,7 @@ function Portfolio() {
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.5 }}
                         >
-                            Full Stack Developer
+                            Full Stack Web Developer
                         </motion.p>
 
                         {/* Brief Description */}
