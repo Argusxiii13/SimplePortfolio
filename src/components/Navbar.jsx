@@ -34,8 +34,8 @@ function Navbar() {
         <nav className={`fixed w-full top-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm shadow-lg' : 'bg-transparent'}`}>
             <div className="container mx-auto px-6 py-4">
                 <div className="flex items-center justify-between">
-                    <motion.a href="#home" onClick={(e) => handleClick(e, '#home')} className="text-2xl font-bold text-blue-600 dark:text-blue-400" initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }}>
-                        JKA<span className="text-gray-900 dark:text-white">E</span>
+                    <motion.a href="#home" onClick={(e) => handleClick(e, '#home')} className="text-2xl font-bold" initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }}>
+                        <span className="text-white" style={{ WebkitTextStroke: '1px black', textShadow: '2px 2px 0 rgba(0,0,0,0.2)' }}>JKA</span><span className="text-black" style={{ WebkitTextStroke: '0.6px rgba(255,255,255,0.9)', textShadow: '0 0 1px rgba(255,255,255,0.6)' }}>E</span>
                     </motion.a>
 
                     <div className="hidden md:flex items-center space-x-8">
