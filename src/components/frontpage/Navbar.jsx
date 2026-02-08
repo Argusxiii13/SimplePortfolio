@@ -44,8 +44,8 @@ function Navbar() {
                                 {link.name}
                             </motion.a>
                         ))}
-                        
-                        <motion.a href="/files/Esperida_JanierKimAnthony_Resume.pdf" download className="px-6 py-2 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors" initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.5 }}>
+
+                        <motion.a href="/files/Esperida_JanierKimAnthony_Resume.pdf" download className="px-6 py-2 bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 border-2 border-blue-600 dark:border-blue-400 rounded-lg font-semibold hover:bg-blue-50 dark:hover:bg-gray-700 transition-colors" initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.5 }}>
                             Resume
                         </motion.a>
                     </div>
@@ -65,7 +65,7 @@ function Navbar() {
                                     {link.name}
                                 </a>
                             ))}
-                            <a href="/files/Esperida_JanierKimAnthony_Resume.pdf" download className="px-6 py-2 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center">
+                            <a href="/files/Esperida_JanierKimAnthony_Resume.pdf" download className="px-6 py-2 bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 border-2 border-blue-600 dark:border-blue-400 rounded-lg font-semibold hover:bg-blue-50 dark:hover:bg-gray-700 transition-colors text-center w-full">
                                 Resume
                             </a>
                         </div>

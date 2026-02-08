@@ -101,77 +101,32 @@ function EducationSection() {
                                     {edu.icon}
                                 </motion.div>
 
-                                <div className="flex-grow">
-                                    <div className="flex flex-wrap items-start justify-between gap-4 mb-3">
-                                        <div>
-                                            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-1">
-                                                {edu.degree}
-                                            </h3>
-                                            <p className="text-xl text-blue-600 dark:text-blue-400 font-semibold">
-                                                {edu.school}
-                                            </p>
-                                        </div>
-                                        
-                                        <div className="flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-800 rounded-full shadow-md">
-                                            <Calendar className="w-4 h-4 text-blue-600 dark:text-blue-400" />
-                                            <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">
-                                                {edu.period}
-                                            </span>
-                                        </div>
-                                    </div>
-
-                                    <p className="text-gray-600 dark:text-gray-400 mb-3">
+                                <div className="flex-1 text-left">
+                                    <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-2">
+                                        {edu.degree}
+                                    </h3>
+                                    <p className="text-lg text-blue-600 dark:text-blue-400 font-semibold mb-1">
+                                        {edu.school}
+                                    </p>
+                                    <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
                                         {edu.location}
                                     </p>
-
-                                    {edu.honor && (
-                                        <motion.div
-                                            className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-yellow-400 to-yellow-500 text-yellow-900 rounded-full font-bold shadow-md"
-                                            initial={{ scale: 0 }}
-                                            whileInView={{ scale: 1 }}
-                                            viewport={{ once: true }}
-                                            transition={{ delay: 0.3, type: "spring", stiffness: 200 }}
-                                            whileTap={{ scale: 1.1 }}
-                                        >
-                                            <Award className="w-5 h-5" />
-                                            {edu.honor}
-                                        </motion.div>
-                                    )}
+                                    <div className="flex flex-wrap gap-4 items-center">
+                                        <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
+                                            <Calendar className="w-4 h-4" />
+                                            <span className="text-sm font-medium">{edu.period}</span>
+                                        </div>
+                                        {edu.honor && (
+                                            <div className="flex items-center gap-2 text-amber-600 dark:text-amber-400">
+                                                <Award className="w-4 h-4" />
+                                                <span className="text-sm font-medium">{edu.honor}</span>
+                                            </div>
+                                        )}
+                                    </div>
                                 </div>
                             </div>
                         </motion.div>
                     ))}
-                </motion.div>
-
-                <motion.div
-                    className="max-w-4xl mx-auto mt-16"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: 0.4 }}
-                >
-                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center">
-                        Certifications
-                    </h3>
-                    <motion.div 
-                        className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-6 shadow-lg border border-green-100 dark:border-gray-600"
-                        whileHover={{ scale: 1.02 }}
-                        whileTap={{ scale: 0.98 }}
-                    >
-                        <div className="flex items-center gap-4">
-                            <div className="flex-shrink-0 w-12 h-12 bg-green-600 dark:bg-green-500 rounded-full flex items-center justify-center text-white">
-                                <Award className="w-6 h-6" />
-                            </div>
-                            <div>
-                                <h4 className="text-lg font-bold text-gray-900 dark:text-white">
-                                    SAP Business One: Systems Integration & Architecture
-                                </h4>
-                                <p className="text-gray-600 dark:text-gray-400">
-                                    STI College Pasay-EDSA • March 2023
-                                </p>
-                            </div>
-                        </div>
-                    </motion.div>
                 </motion.div>
             </div>
         </section>

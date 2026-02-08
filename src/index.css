@@ -37,3 +37,26 @@ body::before {
     0%, 100% { opacity: 0.4; }
     50% { opacity: 0.7; }
 }
+
+/* Project hero size variable
+   Adjust these values to change the static hero (project detail) height across the site.
+   - Default (mobile): --project-hero-height
+   - Large screens (md and up): overridden inside the media query below
+
+   Example: to make it taller on all screens, set `:root { --project-hero-height: 520px; }`
+   or change the md value inside the media query to something like 800px.
+*/
+:root {
+    --project-hero-height: 420px; /* mobile / small screens */
+}
+
+@media (min-width: 768px) {
+    :root {
+        --project-hero-height: 740px; /* md+ screens */
+    }
+}
+
+/* Utility class used by project detail hero */
+.project-hero {
+    height: var(--project-hero-height);
+}

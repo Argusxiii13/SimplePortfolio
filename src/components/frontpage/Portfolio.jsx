@@ -1,7 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 function Portfolio() {
+    const navigate = useNavigate();
+
+    const handleProjectsClick = () => {
+        navigate('/projects');
+    };
+
     return (
         <div>
             <section className="min-h-screen flex items-center justify-center bg-transparent">
@@ -65,14 +72,12 @@ function Portfolio() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.9 }}
                         >
-                            <a 
-                                href="https://github.com/Argusxiii13"
-                                target="_blank"
-                                rel="noopener noreferrer"
+                            <button 
+                                onClick={handleProjectsClick}
                                 className="px-8 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
                             >
                                 Projects
-                            </a>
+                            </button>
                             <a 
                                 href="/files/Esperida_JanierKimAnthony_Resume.pdf"
                                 download
@@ -102,7 +107,7 @@ function Portfolio() {
                             viewBox="0 0 24 24" 
                             stroke="currentColor"
                         >
-                            <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                            <path d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                         </svg>
                     </motion.div>
                 </div>

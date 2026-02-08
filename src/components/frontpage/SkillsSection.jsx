@@ -309,7 +309,6 @@ function SkillsSection() {
 
     return (
         <section id="skills" className="relative">
-            {/* Animated content switch */}
             <AnimatePresence mode="wait">
                 {!isFlipped ? (
 
