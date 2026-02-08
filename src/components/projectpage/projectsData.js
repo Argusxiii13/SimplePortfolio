@@ -7,8 +7,9 @@ export const projectsData = [
         technologies: ["Laravel", "React", "MySQL", "PHP", "Tailwind CSS"],
         category: "Web Development",
         status: "Development Phase",
-        date: "2025",
+        date: "2023",
         link: "https://github.com/Argusxiii13/NRCPNet",
+        deployed: false, // New field to indicate if project is live
         screenshots: [
             "/projects/nrcpnet/ss1.webp",
             "/projects/nrcpnet/ss2.webp",
@@ -47,7 +48,7 @@ export const projectsData = [
             "Feedback/Engagement System"
         ],
         highlights: "Internship project: Enterprise intranet with employee and content management capabilities"
-    },
+    }
     
 ];
 

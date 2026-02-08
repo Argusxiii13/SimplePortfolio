@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useParams, useNavigate } from 'react-router-dom';
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink, Github, XCircle } from 'lucide-react';
 import { getProjectById } from './projectsData';
 import ProjectNavbar from './ProjectNavbar';
 import ScreenshotGallery from './ScreenshotGallery';
@@ -32,7 +32,6 @@ function ProjectDetail() {
         <div className="min-h-screen bg-transparent">
             <ProjectNavbar />
             
-            {/* Hero Section with Main Image */}
             <section className="pt-28 pb-12 bg-transparent">
                 <div className="container mx-auto px-6">
                     <motion.div
@@ -49,11 +48,6 @@ function ProjectDetail() {
                         </p>
                     </motion.div>
 
-                    {/* Main Hero Image */}
-                    {/*
-                        Hero size controls: adjust the height classes below.
-                        Example: change `h-96 md:h-[500px]` to `h-[420px] md:h-[700px]` for a taller display.
-                    */}
                     <motion.div
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
@@ -78,13 +72,10 @@ function ProjectDetail() {
                 </div>
             </section>
 
-            {/* Content Section */}
             <section className="py-16 bg-transparent">
                 <div className="container mx-auto px-6">
                     <div className="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto">
-                        {/* Main Content */}
                         <div className="md:col-span-2 space-y-12">
-                            {/* Key Features */}
                             <motion.div
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
@@ -113,7 +104,6 @@ function ProjectDetail() {
                                 </div>
                             </motion.div>
 
-                            {/* Screenshots Gallery */}
                             {project.screenshots && project.screenshots.length > 0 && (
                                 <ScreenshotGallery 
                                     screenshots={project.screenshots} 
@@ -124,30 +114,29 @@ function ProjectDetail() {
                             )}
                         </div>
 
-                        {/* Sidebar */}
                         <div className="md:col-span-1">
-                            {/* Project Info Card */}
                             <motion.div
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 className="sticky top-28 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-6 border border-gray-700 space-y-6"
                             >
-                                {/* Status */}
                                 <div>
                                     <p className="text-gray-400 text-sm mb-2 font-semibold">Status</p>
-                                    <span className="inline-block px-4 py-2 bg-green-500/20 text-green-400 rounded-lg text-sm font-medium border border-green-500/50">
+                                    <span className={`inline-block px-4 py-2 rounded-lg text-sm font-medium border ${
+                                        project.status === 'Completed' 
+                                            ? 'bg-green-500/20 text-green-400 border-green-500/50'
+                                            : 'bg-yellow-500/20 text-yellow-400 border-yellow-500/50'
+                                    }`}>
                                         {project.status}
                                     </span>
                                 </div>
 
-                                {/* Date */}
                                 <div>
                                     <p className="text-gray-400 text-sm mb-2 font-semibold">Completed</p>
                                     <p className="text-white text-lg">{project.date}</p>
                                 </div>
 
-                                {/* Technologies */}
                                 <div>
                                     <p className="text-gray-400 text-sm mb-4 font-semibold">Technologies Used</p>
                                     <div className="flex flex-wrap gap-2">
@@ -162,12 +151,10 @@ function ProjectDetail() {
                                     </div>
                                 </div>
 
-                                {/* Divider */}
                                 <div className="h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent" />
 
-                                {/* Action Buttons */}
                                 <div className="space-y-3">
-                                    {project.link && (
+                                    {project.deployed ? (
                                         <motion.a
                                             href={project.link}
                                             target="_blank"
@@ -179,7 +166,13 @@ function ProjectDetail() {
                                             <ExternalLink className="w-4 h-4" />
                                             View Project
                                         </motion.a>
+                                    ) : (
+                                        <div className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-gray-700/50 text-gray-500 rounded-lg font-semibold cursor-not-allowed border border-gray-600">
+                                            <XCircle className="w-4 h-4" />
+                                            Unavailable
+                                        </div>
                                     )}
+                                    
                                     <motion.a
                                         href={project.link || '#'}
                                         target="_blank"
