@@ -16,17 +16,17 @@ function SkillsSection() {
             skills: [
                 {
                     name: "React",
-                    usedIn: ["DOST-NRCP Intranet", "AutoConnect Capstone"],
+                    usedIn: ["NRCPNet Intranet", "Personal Projects"],
                     highlight: "Building complex UIs"
                 },
                 {
                     name: "Next.js",
-                    usedIn: ["AutoConnect Capstone"],
-                    highlight: "Full-stack car rental system"
+                    usedIn: ["Personal Projects"],
+                    highlight: "Full-stack app patterns"
                 },
                 {
                     name: "Laravel",
-                    usedIn: ["DOST-NRCP Intranet"],
+                    usedIn: ["NRCPNet Intranet"],
                     highlight: "REST APIs & authentication"
                 },
                 {
@@ -44,17 +44,17 @@ function SkillsSection() {
             skills: [
                 {
                     name: "MySQL",
-                    usedIn: ["DOST-NRCP Intranet"],
+                    usedIn: ["NRCPNet Intranet"],
                     highlight: "Employee & content management"
                 },
                 {
                     name: "PostgreSQL",
-                    usedIn: ["AutoConnect Capstone"],
-                    highlight: "Fleet tracking & analytics"
+                    usedIn: ["Personal Projects"],
+                    highlight: "Relational data modeling"
                 },
                 {
                     name: "Laravel Sanctum",
-                    usedIn: ["DOST-NRCP Intranet"],
+                    usedIn: ["NRCPNet Intranet"],
                     highlight: "API authentication"
                 }
             ]
@@ -72,7 +72,7 @@ function SkillsSection() {
                 },
                 {
                     name: "PHP",
-                    usedIn: ["DOST-NRCP Intranet"],
+                    usedIn: ["NRCPNet Intranet"],
                     highlight: "Laravel backend development"
                 },
                 {
@@ -101,7 +101,7 @@ function SkillsSection() {
             x: 25, 
             y: 28,
             connections: ['nextjs', 'javascript', 'html-css'],
-            projects: ['DOST-NRCP Intranet', 'AutoConnect']
+            projects: ['NRCPNet Intranet', 'Personal Projects']
         },
         { 
             id: 'nextjs', 
@@ -111,7 +111,7 @@ function SkillsSection() {
             x: 15, 
             y: 50,
             connections: ['react', 'nodejs', 'postgresql'],
-            projects: ['AutoConnect Capstone']
+            projects: ['Personal Projects']
         },
         { 
             id: 'javascript', 
@@ -141,7 +141,7 @@ function SkillsSection() {
             x: 72, 
             y: 32,
             connections: ['php', 'mysql', 'sanctum'],
-            projects: ['DOST-NRCP Intranet']
+            projects: ['NRCPNet Intranet']
         },
         { 
             id: 'php', 
@@ -151,7 +151,7 @@ function SkillsSection() {
             x: 85, 
             y: 50,
             connections: ['laravel', 'mysql'],
-            projects: ['DOST-NRCP Intranet']
+            projects: ['NRCPNet Intranet']
         },
         { 
             id: 'nodejs', 
@@ -171,7 +171,7 @@ function SkillsSection() {
             x: 72, 
             y: 70,
             connections: ['laravel', 'php'],
-            projects: ['DOST-NRCP Intranet']
+            projects: ['NRCPNet Intranet']
         },
         { 
             id: 'postgresql', 
@@ -181,7 +181,7 @@ function SkillsSection() {
             x: 28, 
             y: 72,
             connections: ['nextjs'],
-            projects: ['AutoConnect Capstone']
+            projects: ['Personal Projects']
         },
         { 
             id: 'sanctum', 
@@ -191,7 +191,7 @@ function SkillsSection() {
             x: 85, 
             y: 22,
             connections: ['laravel'],
-            projects: ['DOST-NRCP Intranet']
+            projects: ['NRCPNet Intranet']
         },
         { 
             id: 'tailwind', 

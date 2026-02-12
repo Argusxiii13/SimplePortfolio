@@ -56,7 +56,7 @@ function ProjectsPage() {
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.3 }}
                         >
-                            Explore my portfolio of web development projects showcasing full-stack expertise
+                            A small collection of demo projects where I practice and refine full-stack skills
                         </motion.p>
                     </motion.div>
                 </div>
@@ -148,6 +148,15 @@ function ProjectsPage() {
                             </motion.div>
                         ))}
                     </motion.div>
+                </div>
+            </section>
+
+            <section className="pb-16 bg-transparent">
+                <div className="container mx-auto px-6 text-center">
+                    <p className="text-sm text-gray-500 max-w-3xl mx-auto">
+                        Note: Any company, institution, or organization names shown here are used for demo purposes only
+                        and are not affiliated with real entities.
+                    </p>
                 </div>
             </section>
         </div>

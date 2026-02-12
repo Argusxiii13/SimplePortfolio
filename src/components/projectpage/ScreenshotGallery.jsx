@@ -5,6 +5,14 @@ function ScreenshotGallery({ screenshots, projectTitle }) {
     const [modalOpen, setModalOpen] = useState(false);
     const [modalIndex, setModalIndex] = useState(0);
 
+    const handlePrev = () => {
+        setModalIndex((prev) => (prev - 1 + screenshots.length) % screenshots.length);
+    };
+
+    const handleNext = () => { 
+        setModalIndex((prev) => (prev + 1) % screenshots.length);
+    };
+
     if (!screenshots || screenshots.length === 0) return null;
 
     return (
@@ -30,17 +38,43 @@ function ScreenshotGallery({ screenshots, projectTitle }) {
             </div>
 
             {modalOpen && (
-                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4">
-                    <div className="max-w-4xl w-full">
-                        <button onClick={() => setModalOpen(false)} className="mb-4 px-3 py-2 bg-white/10 text-white rounded">Close</button>
+                <div
+                    className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4"
+                    onClick={() => setModalOpen(false)}
+                >
+                    <div className="max-w-4xl w-full" onClick={(event) => event.stopPropagation()}>
+                        <div className="mb-4 flex items-center justify-between gap-3">
+                            <button
+                                onClick={handlePrev}
+                                className="px-3 py-2 bg-white/10 text-white rounded hover:bg-white/20 transition"
+                                type="button"
+                            >
+                                Prev
+                            </button>
+                            <button
+                                onClick={() => setModalOpen(false)}
+                                className="px-3 py-2 bg-white/10 text-white rounded hover:bg-white/20 transition"
+                                type="button"
+                            >
+                                Close
+                            </button>
+                            <button
+                                onClick={handleNext}
+                                className="px-3 py-2 bg-white/10 text-white rounded hover:bg-white/20 transition"
+                                type="button"
+                            >
+                                Next
+                            </button>
+                        </div>
                         <motion.img
                             key={modalIndex}
                             src={screenshots[modalIndex]}
                             alt={`${projectTitle} modal ${modalIndex + 1}`}
+                            onClick={handleNext}
                             initial={{ opacity: 0, scale: 0.95 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.35 }}
-                            className="w-full h-auto rounded-lg object-contain"
+                            className="w-full h-auto rounded-lg object-contain cursor-pointer"
                         />
                     </div>
                 </div>
