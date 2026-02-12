@@ -43,7 +43,7 @@ function ProjectsPage() {
                         transition={{ duration: 0.8 }}
                     >
                         <h1 className="text-5xl md:text-7xl font-bold mb-6">
-                            <span className="text-white" style={{ WebkitTextStroke: '1px black', textShadow: '2px 2px 0 rgba(0,0,0,0.2)' }}>
+                            <span className="outlined-white-text">
                                 My
                             </span>
                             <span className="block bg-gradient-to-r from-blue-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">

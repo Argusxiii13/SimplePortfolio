@@ -60,3 +60,25 @@ body::before {
 .project-hero {
     height: var(--project-hero-height);
 }
+
+.outlined-white-text {
+    color: #fff;
+    -webkit-text-stroke: 1px #000;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
+    paint-order: stroke fill;
+}
+
+.outlined-black-text {
+    color: #000;
+    -webkit-text-stroke: 0.6px rgba(255, 255, 255, 0.9);
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.6);
+    paint-order: stroke fill;
+}
+
+@media (max-width: 767px) {
+    .outlined-white-text,
+    .outlined-black-text {
+        -webkit-text-stroke: 0;
+        text-shadow: none;
+    }
+}

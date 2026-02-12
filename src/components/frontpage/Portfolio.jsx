@@ -35,7 +35,7 @@ function Portfolio() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.3 }}
                         >
-                            <span className="text-white" style={{ WebkitTextStroke: '1px black', textShadow: '2px 2px 0 rgba(0,0,0,0.2)' }}>
+                            <span className="outlined-white-text">
                                 Janier Kim Anthony
                             </span>
                             <span className="block bg-gradient-to-r from-gray-700 via-gray-900 to-black bg-clip-text text-transparent">

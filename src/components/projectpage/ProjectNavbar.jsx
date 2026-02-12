@@ -27,7 +27,7 @@ function ProjectNavbar() {
             <div className="container mx-auto px-6 py-4">
                 <div className="flex items-center justify-between">
                     <motion.a href="/" onClick={(e) => e.preventDefault()} className="text-2xl font-bold" initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }}>
-                        <span className="text-white" style={{ WebkitTextStroke: '1px black', textShadow: '2px 2px 0 rgba(0,0,0,0.2)' }}>JKA</span><span className="text-black" style={{ WebkitTextStroke: '0.6px rgba(255,255,255,0.9)', textShadow: '0 0 1px rgba(255,255,255,0.6)' }}>E</span>
+                        <span className="outlined-white-text">JKA</span><span className="outlined-black-text">E</span>
                     </motion.a>
 
                     <motion.button 
