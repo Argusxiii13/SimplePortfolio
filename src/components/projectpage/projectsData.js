@@ -59,6 +59,7 @@ export const projectsData = [
         status: "Development Phase",
         date: "2024",
         link: "https://github.com/Argusxiii13/Front-End-Client",
+        liveLink: "https://autoconnect-client-view.vercel.app",
         deployed: true,
         screenshots: [
             "/projects/autoconnectclient/ss1.webp",

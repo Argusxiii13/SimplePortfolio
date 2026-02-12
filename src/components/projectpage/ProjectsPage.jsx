@@ -97,11 +97,22 @@ function ProjectsPage() {
                                 </div>
 
                                 <div className="relative p-6 flex flex-col h-64">
-                                    <div className="flex items-center justify-between mb-4">
-                                        <span className="px-3 py-1 text-xs font-semibold text-blue-400 bg-blue-500/20 rounded-full border border-blue-500/50">
-                                            {project.category}
-                                        </span>
-                                        <span className="text-xs text-gray-400">{project.date}</span>
+                                    <div className="flex items-center justify-between mb-4 gap-2">
+                                        <div className="flex items-center gap-2 min-w-0">
+                                            <span className="px-3 py-1 text-xs font-semibold text-blue-400 bg-blue-500/20 rounded-full border border-blue-500/50 whitespace-nowrap">
+                                                {project.category}
+                                            </span>
+                                            <span
+                                                className={`px-3 py-1 text-xs font-semibold rounded-full border whitespace-nowrap ${
+                                                    project.deployed
+                                                        ? 'text-green-400 bg-green-500/20 border-green-500/50'
+                                                        : 'text-gray-400 bg-gray-500/20 border-gray-500/50'
+                                                }`}
+                                            >
+                                                {project.deployed ? 'Live View Available' : 'No Live View'}
+                                            </span>
+                                        </div>
+                                        <span className="text-xs text-gray-400 whitespace-nowrap">{project.date}</span>
                                     </div>
 
                                     <h3 className="text-xl md:text-2xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">
