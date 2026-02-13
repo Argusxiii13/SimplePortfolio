@@ -340,11 +340,29 @@ function SkillsSection() {
                                 <motion.button
                                     onClick={() => setIsFlipped(!isFlipped)}
                                     className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-full shadow-lg font-semibold transition-all"
+                                    style={{ backgroundSize: '200% 200%' }}
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
                                     initial={{ opacity: 0, y: 20 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ delay: 0.3 }}
+                                    animate={{
+                                        opacity: 1,
+                                        y: 0,
+                                        scale: [1, 1.035, 1.012, 1],
+                                        backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
+                                        boxShadow: [
+                                            '0 0 6px rgba(59,130,246,0.12), 0 0 10px rgba(147,51,234,0.08), 0 8px 18px rgba(0,0,0,0.22)',
+                                            '0 0 24px rgba(59,130,246,0.46), 0 0 42px rgba(147,51,234,0.34), 0 10px 20px rgba(0,0,0,0.24)',
+                                            '0 0 8px rgba(59,130,246,0.14), 0 0 12px rgba(147,51,234,0.1), 0 8px 18px rgba(0,0,0,0.22)',
+                                            '0 0 0px rgba(59,130,246,0), 0 0 0px rgba(147,51,234,0), 0 8px 18px rgba(0,0,0,0.22)'
+                                        ]
+                                    }}
+                                    transition={{
+                                        opacity: { delay: 0.3, duration: 0.5 },
+                                        y: { delay: 0.3, duration: 0.5 },
+                                        scale: { delay: 0.8, duration: 5.5, repeat: Infinity, ease: 'easeInOut', times: [0, 0.35, 0.7, 1] },
+                                        backgroundPosition: { duration: 8, repeat: Infinity, ease: 'easeInOut' },
+                                        boxShadow: { delay: 0.8, duration: 5.5, repeat: Infinity, ease: 'easeInOut', times: [0, 0.35, 0.7, 1] }
+                                    }}
                                 >
                                     <Orbit className="w-5 h-5" />
                                     Switch to Constellation View
@@ -512,12 +530,30 @@ function SkillsSection() {
                                 {/* Toggle Button */}
                                 <motion.button
                                     onClick={() => setIsFlipped(!isFlipped)}
-                                    className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white rounded-full shadow-lg font-semibold transition-all border border-white/20"
+                                    className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-full shadow-lg font-semibold transition-all"
+                                    style={{ backgroundSize: '200% 200%' }}
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
                                     initial={{ opacity: 0, y: 20 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ delay: 0.3 }}
+                                    animate={{
+                                        opacity: 1,
+                                        y: 0,
+                                        scale: [1, 1.035, 1.012, 1],
+                                        backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
+                                        boxShadow: [
+                                            '0 0 6px rgba(59,130,246,0.12), 0 0 10px rgba(147,51,234,0.08), 0 8px 18px rgba(0,0,0,0.22)',
+                                            '0 0 24px rgba(59,130,246,0.46), 0 0 42px rgba(147,51,234,0.34), 0 10px 20px rgba(0,0,0,0.24)',
+                                            '0 0 8px rgba(59,130,246,0.14), 0 0 12px rgba(147,51,234,0.1), 0 8px 18px rgba(0,0,0,0.22)',
+                                            '0 0 0px rgba(59,130,246,0), 0 0 0px rgba(147,51,234,0), 0 8px 18px rgba(0,0,0,0.22)'
+                                        ]
+                                    }}
+                                    transition={{
+                                        opacity: { delay: 0.3, duration: 0.5 },
+                                        y: { delay: 0.3, duration: 0.5 },
+                                        scale: { delay: 0.8, duration: 5.5, repeat: Infinity, ease: 'easeInOut', times: [0, 0.35, 0.7, 1] },
+                                        backgroundPosition: { duration: 8, repeat: Infinity, ease: 'easeInOut' },
+                                        boxShadow: { delay: 0.8, duration: 5.5, repeat: Infinity, ease: 'easeInOut', times: [0, 0.35, 0.7, 1] }
+                                    }}
                                 >
                                     <Orbit className="w-5 h-5" />
                                     Switch to List View
