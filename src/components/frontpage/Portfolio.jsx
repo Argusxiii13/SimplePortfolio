@@ -70,7 +70,7 @@ function Portfolio({ onCtaVisibilityChange }) {
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.5 }}
                         >
-                            Full Stack Web Developer
+                            Web Developer
                         </motion.p>
 
                         {/* Brief Description */}
@@ -80,9 +80,8 @@ function Portfolio({ onCtaVisibilityChange }) {
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.7 }}
                         >
-                            Cum Laude graduate in Information Technology with hands-on experience 
-                            in building full-stack web applications using React, Laravel, and Next.js.
-                            Actively seeking opportunities to contribute to innovative projects.
+                            Aspiring web developer with experience building applications using React, Laravel, 
+                            and Next.js. Looking for opportunities to learn and contribute to meaningful projects.
                         </motion.p>
 
                         {/* CTA Buttons */}
