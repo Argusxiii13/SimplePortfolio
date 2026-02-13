@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { ArrowRight, ExternalLink } from 'lucide-react';
 import { projectsData } from './projectsData';
 import ProjectNavbar from './ProjectNavbar';
+import Footer from '../Footer';
 
 function ProjectsPage() {
     const navigate = useNavigate();
@@ -96,7 +97,7 @@ function ProjectsPage() {
                                     <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors duration-300" />
                                 </div>
 
-                                <div className="relative p-6 flex flex-col h-[19rem]">
+                                <div className="relative p-6 flex flex-col min-h-[20rem]">
                                     <div className="flex flex-wrap items-start mb-4 gap-2">
                                         <div className="flex flex-wrap items-center gap-2 min-w-0">
                                             <span className="px-3 py-1 text-xs font-semibold text-blue-400 bg-blue-500/20 rounded-full border border-blue-500/50 whitespace-nowrap">
@@ -104,9 +105,18 @@ function ProjectsPage() {
                                             </span>
                                             <span
                                                 className={`px-3 py-1 text-xs font-semibold rounded-full border whitespace-nowrap ${
+                                                    project.mobileResponsive
+                                                        ? 'text-cyan-300 bg-cyan-500/20 border-cyan-500/50'
+                                                        : 'text-amber-300 bg-amber-500/20 border-amber-500/50'
+                                                }`}
+                                            >
+                                                {project.mobileResponsive ? 'Mobile Responsive' : 'Desktop Only'}
+                                            </span>
+                                            <span
+                                                className={`px-3 py-1 text-xs font-semibold rounded-full border whitespace-nowrap ${
                                                     project.deployed
                                                         ? 'text-green-400 bg-green-500/20 border-green-500/50'
-                                                        : 'text-gray-400 bg-gray-500/20 border-gray-500/50'
+                                                        : 'text-amber-300 bg-amber-500/20 border-amber-500/50'
                                                 }`}
                                             >
                                                 {project.deployed ? 'Live View Available' : 'No Live View'}
@@ -114,13 +124,12 @@ function ProjectsPage() {
                                         </div>
                                     </div>
 
-                                    <div className="flex items-center gap-2 mb-2">
+                                    <div className="mb-2">
                                         <h3 className="text-xl md:text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">
-                                            {project.title}
+                                            {`${project.title} (${project.date})`}
                                         </h3>
-                                        <span className="text-xs text-gray-400 whitespace-nowrap">{project.date}</span>
                                     </div>
-                                    <p className="text-gray-400 text-sm mb-4 flex-1 line-clamp-2">
+                                    <p className="text-gray-400 text-sm mb-4">
                                         {project.shortDescription}
                                     </p>
 
@@ -164,14 +173,7 @@ function ProjectsPage() {
                 </div>
             </section>
 
-            <section className="pb-16 bg-transparent">
-                <div className="container mx-auto px-6 text-center">
-                    <p className="text-sm text-gray-500 max-w-3xl mx-auto">
-                        Note: Any company, institution, or organization names shown here are used for demo purposes only
-                        and are not affiliated with real entities.
-                    </p>
-                </div>
-            </section>
+            <Footer note="Note: Any company, institution, or organization names shown here are used for demo purposes only and are not affiliated with real entities." />
         </div>
     );
 }

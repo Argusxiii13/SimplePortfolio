@@ -109,28 +109,6 @@ function Portfolio({ onCtaVisibilityChange }) {
                         </motion.div>
                     </motion.div>
 
-                    {/* Scroll Indicator */}
-                    <motion.div
-                        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1, y: [0, 10, 0] }}
-                        transition={{ 
-                            opacity: { delay: 1.5 },
-                            y: { repeat: Infinity, duration: 1.5 }
-                        }}
-                    >
-                        <svg 
-                            className="w-6 h-6 text-blue-600 dark:text-blue-400" 
-                            fill="none" 
-                            strokeLinecap="round" 
-                            strokeLinejoin="round" 
-                            strokeWidth="2" 
-                            viewBox="0 0 24 24" 
-                            stroke="currentColor"
-                        >
-                            <path d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                        </svg>
-                    </motion.div>
                 </div>
             </section>
         </div>

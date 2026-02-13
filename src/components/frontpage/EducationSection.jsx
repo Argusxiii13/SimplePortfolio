@@ -91,7 +91,7 @@ function EducationSection() {
                                 <div className="absolute left-12 top-full h-8 w-0.5 bg-blue-300 dark:bg-blue-600 -z-10" />
                             )}
 
-                            <div className="flex items-start gap-6">
+                            <div className="flex items-start gap-6 justify-between">
                                 <motion.div
                                     className="flex-shrink-0 w-12 h-12 bg-blue-600 dark:bg-blue-500 rounded-full flex items-center justify-center text-white shadow-lg"
                                     whileHover={{ rotate: 360 }}
@@ -117,13 +117,21 @@ function EducationSection() {
                                             <span className="text-sm font-medium">{edu.period}</span>
                                         </div>
                                         {edu.honor && (
-                                            <div className="flex items-center gap-2 text-amber-600 dark:text-amber-400">
+                                            <div className="flex md:hidden items-center gap-2 text-amber-600 dark:text-amber-400">
                                                 <Award className="w-4 h-4" />
                                                 <span className="text-sm font-medium">{edu.honor}</span>
                                             </div>
                                         )}
                                     </div>
                                 </div>
+
+                                {edu.honor && (
+                                    <div className="hidden md:flex flex-col items-center justify-center min-w-[8rem] text-center rounded-xl border border-amber-300/70 dark:border-amber-500/50 bg-amber-100/70 dark:bg-amber-500/15 px-4 py-5">
+                                        <Award className="w-10 h-10 text-amber-600 dark:text-amber-400 mb-2" />
+                                        <p className="text-sm font-semibold text-amber-700 dark:text-amber-300">{edu.honor}</p>
+                                        <p className="text-[11px] text-amber-700/80 dark:text-amber-300/80">Academic Distinction</p>
+                                    </div>
+                                )}
                             </div>
                         </motion.div>
                     ))}

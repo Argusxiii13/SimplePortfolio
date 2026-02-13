@@ -6,6 +6,7 @@ export const projectsData = [
         description: "NRCPNet is an organizational management and knowledge-sharing platform designed for institutional use. It manages employee and organizational data with division and section hierarchies, and provides a centralized Content Management System for announcements, featured content, and event scheduling. The platform includes a document sharing module for organizational resources and implements role-based access controls for appropriate information visibility. An integrated feedback system enables employees to submit suggestions and engage with the organization, fostering collaborative communication.",
         technologies: ["Laravel", "React", "MySQL", "PHP", "Tailwind CSS"],
         category: "Web Development",
+        mobileResponsive: false,
         status: "Development Phase",
         date: "2025",
         link: "https://github.com/Argusxiii13/NRCPNet",
@@ -56,6 +57,7 @@ export const projectsData = [
         description: "AutoConnect Transport is a modern car rental platform designed to transform the customer experience through intuitive booking and data-driven personalization. The platform eliminates complex manual processes with a seamless online interface, while intelligent analytics optimize pricing and vehicle availability based on customer preferences and seasonal demand patterns. Built with reliability, usability, and cross-device accessibility in mind, the platform delivers a superior rental experience that sets new standards in customer satisfaction and operational efficiency.",
         technologies: ["React", "Node.js", "PostgreSQL", "Tailwind CSS"],
         category: "Web Development",
+        mobileResponsive: true,
         status: "Development Phase",
         date: "2024",
         link: "https://github.com/Argusxiii13/Front-End-Client",
@@ -95,6 +97,7 @@ export const projectsData = [
             "Tailwind CSS"
         ],
         category: "Web Development",
+        mobileResponsive: false,
         status: "Development Phase",
         date: "2024",
         link: "https://github.com/Argusxiii13/Front-End-Admin",

@@ -5,6 +5,7 @@ import { ExternalLink, Github, XCircle } from 'lucide-react';
 import { getProjectById } from './projectsData';
 import ProjectNavbar from './ProjectNavbar';
 import ScreenshotGallery from './ScreenshotGallery';
+import Footer from '../Footer';
 
 function ProjectDetail() {
     const { id } = useParams();
@@ -41,7 +42,7 @@ function ProjectDetail() {
                         className="mb-8"
                     >
                         <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
-                            {project.title}
+                            {`${project.title} (${project.date})`}
                         </h1>
                         <p className="text-xl text-gray-400 max-w-3xl">
                             {project.description}
@@ -138,6 +139,17 @@ function ProjectDetail() {
                                 </div>
 
                                 <div>
+                                    <p className="text-gray-400 text-sm mb-2 font-semibold">Mobile Support</p>
+                                    <span className={`inline-block px-4 py-2 rounded-lg text-sm font-medium border ${
+                                        project.mobileResponsive
+                                            ? 'bg-cyan-500/20 text-cyan-300 border-cyan-500/50'
+                                            : 'bg-amber-500/20 text-amber-300 border-amber-500/50'
+                                    }`}>
+                                        {project.mobileResponsive ? 'Mobile Responsive' : 'Desktop Only'}
+                                    </span>
+                                </div>
+
+                                <div>
                                     <p className="text-gray-400 text-sm mb-4 font-semibold">Technologies Used</p>
                                     <div className="flex flex-wrap gap-2">
                                         {project.technologies.map((tech) => (
@@ -190,6 +202,8 @@ function ProjectDetail() {
                     </div>
                 </div>
             </section>
+
+            <Footer />
         </div>
     );
 }

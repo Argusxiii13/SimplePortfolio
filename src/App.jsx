@@ -5,6 +5,7 @@ import Portfolio from './components/frontpage/Portfolio';
 import EducationSection from './components/frontpage/EducationSection'; 
 import SkillsSection from './components/frontpage/SkillsSection';
 import ContactSection from './components/frontpage/ContactSection';
+import Footer from './components/Footer';
 import ProjectsPage from './components/projectpage/ProjectsPage';
 import ProjectDetail from './components/projectpage/ProjectDetail';
 
@@ -26,6 +27,7 @@ function FrontPage() {
       <div id="contact">
         <ContactSection />
       </div>
+      <Footer />
     </>
   );
 }
