@@ -77,7 +77,7 @@ function ProjectsPage() {
                                 variants={cardVariants}
                                 whileHover={{ y: -10, scale: 1.02 }}
                                 whileTap={{ scale: 0.98 }}
-                                className="group relative overflow-hidden bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-700 hover:border-blue-500 cursor-pointer w-full max-w-md"
+                                className="group relative overflow-hidden bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-700 hover:border-blue-500 cursor-pointer w-full max-w-md h-full flex flex-col"
                                 onClick={() => navigate(`/projects/${project.id}`)}
                             >
                                 <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-purple-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -97,7 +97,7 @@ function ProjectsPage() {
                                     <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors duration-300" />
                                 </div>
 
-                                <div className="relative p-6 flex flex-col min-h-[20rem]">
+                                <div className="relative p-6 flex flex-col flex-1 min-h-[20rem]">
                                     <div className="flex flex-wrap items-start mb-4 gap-2">
                                         <div className="flex flex-wrap items-center gap-2 min-w-0">
                                             <span className="px-3 py-1 text-xs font-semibold text-blue-400 bg-blue-500/20 rounded-full border border-blue-500/50 whitespace-nowrap">
@@ -149,7 +149,7 @@ function ProjectsPage() {
                                         )}
                                     </div>
 
-                                    <div className="flex items-center justify-between pt-4 border-t border-gray-700 group-hover:border-blue-500 transition-colors">
+                                    <div className="flex items-center justify-between pt-4 mt-auto border-t border-gray-700 group-hover:border-blue-500 transition-colors">
                                         <span className="text-sm text-gray-400 group-hover:text-blue-400 transition-colors flex items-center gap-1">
                                             View Details
                                             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
