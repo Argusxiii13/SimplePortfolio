@@ -54,7 +54,7 @@ export const projectsData = [
         title: "AutoConnect Transport",
         shortDescription: "Car rental platform with streamlined booking and personalized experience",
         description: "AutoConnect Transport is a modern car rental platform designed to transform the customer experience through intuitive booking and data-driven personalization. The platform eliminates complex manual processes with a seamless online interface, while intelligent analytics optimize pricing and vehicle availability based on customer preferences and seasonal demand patterns. Built with reliability, usability, and cross-device accessibility in mind, the platform delivers a superior rental experience that sets new standards in customer satisfaction and operational efficiency.",
-        technologies: ["React", "Node.js", "Express", "PostgreSQL", "Tailwind CSS"],
+        technologies: ["React", "Node.js", "PostgreSQL", "Tailwind CSS"],
         category: "Web Development",
         status: "Development Phase",
         date: "2024",
@@ -92,11 +92,7 @@ export const projectsData = [
         technologies: [
             "React",
             "Vite",
-            "Tailwind CSS",
-            "React Router",
-            "Axios",
-            "Recharts",
-            "Framer Motion"
+            "Tailwind CSS"
         ],
         category: "Web Development",
         status: "Development Phase",

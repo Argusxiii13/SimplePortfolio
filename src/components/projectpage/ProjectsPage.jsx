@@ -35,34 +35,34 @@ function ProjectsPage() {
         <div className="min-h-screen bg-transparent">
             <ProjectNavbar />
             
-            <section className="pt-32 pb-16 md:pb-20 bg-transparent">
-                <div className="container mx-auto px-6 text-center">
-                    <motion.div
-                        initial={{ opacity: 0, y: -30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
-                    >
-                        <h1 className="text-5xl md:text-7xl font-bold mb-6">
-                            <span className="outlined-white-text">
-                                My
-                            </span>
-                            <span className="block bg-gradient-to-r from-blue-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                                Projects
-                            </span>
-                        </h1>
-                        <motion.p 
-                            className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto"
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{ delay: 0.3 }}
-                        >
-                            A small collection of demo projects where I practice and refine full-stack skills
-                        </motion.p>
-                    </motion.div>
-                </div>
-            </section>
+<section className="pt-24 pb-6 md:pb-8 bg-transparent">
+    <div className="container mx-auto px-6 text-center">
+        <motion.div
+            initial={{ opacity: 0, y: -30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+        >
+            <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-4">
+                <span className="outlined-white-text">
+                    My
+                </span>
+                <span className="inline-block ml-3 leading-[1.15] pb-1 bg-gradient-to-r from-blue-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+                    Projects
+                </span>
+            </h1>
+            <motion.p 
+                className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.3 }}
+            >
+                Projects that challenged me to learn, experiment, and grow as a developer
+            </motion.p>
+        </motion.div>
+    </div>
+</section>
 
-            <section className="py-20 bg-transparent">
+            <section className="pt-10 pb-20 bg-transparent">
                 <div className="container mx-auto px-6">
                     <motion.div
                         className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto justify-items-center"
@@ -96,9 +96,9 @@ function ProjectsPage() {
                                     <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors duration-300" />
                                 </div>
 
-                                <div className="relative p-6 flex flex-col h-64">
-                                    <div className="flex items-center justify-between mb-4 gap-2">
-                                        <div className="flex items-center gap-2 min-w-0">
+                                <div className="relative p-6 flex flex-col h-[19rem]">
+                                    <div className="flex flex-wrap items-start mb-4 gap-2">
+                                        <div className="flex flex-wrap items-center gap-2 min-w-0">
                                             <span className="px-3 py-1 text-xs font-semibold text-blue-400 bg-blue-500/20 rounded-full border border-blue-500/50 whitespace-nowrap">
                                                 {project.category}
                                             </span>
@@ -112,12 +112,14 @@ function ProjectsPage() {
                                                 {project.deployed ? 'Live View Available' : 'No Live View'}
                                             </span>
                                         </div>
-                                        <span className="text-xs text-gray-400 whitespace-nowrap">{project.date}</span>
                                     </div>
 
-                                    <h3 className="text-xl md:text-2xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">
-                                        {project.title}
-                                    </h3>
+                                    <div className="flex items-center gap-2 mb-2">
+                                        <h3 className="text-xl md:text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">
+                                            {project.title}
+                                        </h3>
+                                        <span className="text-xs text-gray-400 whitespace-nowrap">{project.date}</span>
+                                    </div>
                                     <p className="text-gray-400 text-sm mb-4 flex-1 line-clamp-2">
                                         {project.shortDescription}
                                     </p>

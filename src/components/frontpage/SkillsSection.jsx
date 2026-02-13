@@ -16,12 +16,12 @@ function SkillsSection() {
             skills: [
                 {
                     name: "React",
-                    usedIn: ["NRCPNet Intranet", "Personal Projects"],
+                    usedIn: ["NRCPNet Intranet", "AutoConnect Transport"],
                     highlight: "Building complex UIs"
                 },
                 {
                     name: "Next.js",
-                    usedIn: ["Personal Projects"],
+                    usedIn: ["AutoConnect Transport"],
                     highlight: "Full-stack app patterns"
                 },
                 {
@@ -31,7 +31,7 @@ function SkillsSection() {
                 },
                 {
                     name: "Node.js",
-                    usedIn: ["Personal Projects"],
+                    usedIn: ["AutoConnect Transport"],
                     highlight: "Backend development"
                 }
             ]
@@ -49,7 +49,7 @@ function SkillsSection() {
                 },
                 {
                     name: "PostgreSQL",
-                    usedIn: ["Personal Projects"],
+                    usedIn: ["AutoConnect Transport"],
                     highlight: "Relational data modeling"
                 },
                 {
@@ -101,7 +101,7 @@ function SkillsSection() {
             x: 25, 
             y: 28,
             connections: ['nextjs', 'javascript', 'html-css'],
-            projects: ['NRCPNet Intranet', 'Personal Projects']
+            projects: ['NRCPNet Intranet', 'AutoConnect Transport']
         },
         { 
             id: 'nextjs', 
@@ -111,7 +111,7 @@ function SkillsSection() {
             x: 15, 
             y: 50,
             connections: ['react', 'nodejs', 'postgresql'],
-            projects: ['Personal Projects']
+            projects: ['AutoConnect Transport']
         },
         { 
             id: 'javascript', 
@@ -161,7 +161,7 @@ function SkillsSection() {
             x: 60, 
             y: 58,
             connections: ['javascript', 'nextjs'],
-            projects: ['Personal Projects']
+            projects: ['AutoConnect Transport']
         },
         { 
             id: 'mysql', 
@@ -181,7 +181,7 @@ function SkillsSection() {
             x: 28, 
             y: 72,
             connections: ['nextjs'],
-            projects: ['Personal Projects']
+            projects: ['AutoConnect Transport']
         },
         { 
             id: 'sanctum', 
