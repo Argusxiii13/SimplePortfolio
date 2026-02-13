@@ -1,9 +1,29 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 
-function Portfolio() {
+function Portfolio({ onCtaVisibilityChange }) {
     const navigate = useNavigate();
+    const ctaRef = useRef(null);
+
+    useEffect(() => {
+        if (!ctaRef.current || !onCtaVisibilityChange) return;
+
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                onCtaVisibilityChange(entry.isIntersecting);
+            },
+            {
+                threshold: 0.25,
+            }
+        );
+
+        observer.observe(ctaRef.current);
+
+        return () => {
+            observer.disconnect();
+        };
+    }, [onCtaVisibilityChange]);
 
     const handleProjectsClick = () => {
         navigate('/projects');
@@ -67,6 +87,7 @@ function Portfolio() {
 
                         {/* CTA Buttons */}
                         <motion.div 
+                            ref={ctaRef}
                             className="flex flex-col sm:flex-row gap-4 justify-center"
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}

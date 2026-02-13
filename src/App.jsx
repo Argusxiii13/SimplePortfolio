@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/frontpage/Navbar';
 import Portfolio from './components/frontpage/Portfolio';
@@ -8,11 +9,13 @@ import ProjectsPage from './components/projectpage/ProjectsPage';
 import ProjectDetail from './components/projectpage/ProjectDetail';
 
 function FrontPage() {
+  const [heroCtaVisible, setHeroCtaVisible] = useState(true);
+
   return (
     <>
-      <Navbar />
+      <Navbar heroCtaVisible={heroCtaVisible} />
       <div id="home">
-        <Portfolio />
+        <Portfolio onCtaVisibilityChange={setHeroCtaVisible} />
       </div>
       <div id="education">
         <EducationSection />

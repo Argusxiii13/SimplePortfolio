@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
-function Navbar() {
+function Navbar({ heroCtaVisible = true }) {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -30,6 +32,11 @@ function Navbar() {
         }
     };
 
+    const handleProjectsClick = () => {
+        navigate('/projects');
+        setIsOpen(false);
+    };
+
     return (
         <nav className={`fixed w-full top-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm shadow-lg' : 'bg-transparent'}`}>
             <div className="container mx-auto px-6 py-4">
@@ -45,9 +52,16 @@ function Navbar() {
                             </motion.a>
                         ))}
 
-                        <motion.a href="/files/Esperida_JanierKimAnthony_Resume.pdf" download className="px-6 py-2 bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 border-2 border-blue-600 dark:border-blue-400 rounded-lg font-semibold hover:bg-blue-50 dark:hover:bg-gray-700 transition-colors" initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.5 }}>
-                            Resume
-                        </motion.a>
+                        {!heroCtaVisible && (
+                            <>
+                                <motion.button onClick={handleProjectsClick} className="px-6 py-2 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors" initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.5 }}>
+                                    Projects
+                                </motion.button>
+                                <motion.a href="/files/Esperida_JanierKimAnthony_Resume.pdf" download className="px-6 py-2 bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 border-2 border-blue-600 dark:border-blue-400 rounded-lg font-semibold hover:bg-blue-50 dark:hover:bg-gray-700 transition-colors" initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.55 }}>
+                                    Resume
+                                </motion.a>
+                            </>
+                        )}
                     </div>
 
                     <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-gray-700 dark:text-gray-300 focus:outline-none" aria-label="Toggle menu" aria-expanded={isOpen}>
@@ -65,9 +79,16 @@ function Navbar() {
                                     {link.name}
                                 </a>
                             ))}
-                            <a href="/files/Esperida_JanierKimAnthony_Resume.pdf" download className="px-6 py-2 bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 border-2 border-blue-600 dark:border-blue-400 rounded-lg font-semibold hover:bg-blue-50 dark:hover:bg-gray-700 transition-colors text-center w-full">
-                                Resume
-                            </a>
+                            {!heroCtaVisible && (
+                                <>
+                                    <button onClick={handleProjectsClick} className="px-6 py-2 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center w-full">
+                                        Projects
+                                    </button>
+                                    <a href="/files/Esperida_JanierKimAnthony_Resume.pdf" download className="px-6 py-2 bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 border-2 border-blue-600 dark:border-blue-400 rounded-lg font-semibold hover:bg-blue-50 dark:hover:bg-gray-700 transition-colors text-center w-full">
+                                        Resume
+                                    </a>
+                                </>
+                            )}
                         </div>
                     </motion.div>
                 )}
