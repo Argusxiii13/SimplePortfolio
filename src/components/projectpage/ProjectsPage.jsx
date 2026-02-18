@@ -47,7 +47,7 @@ function ProjectsPage() {
                 <span className="outlined-white-text">
                     My
                 </span>
-                <span className="inline-block ml-3 leading-[1.15] pb-1 bg-gradient-to-r from-blue-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+                <span className="inline-block ml-3 leading-[1.15] pb-1 bg-gradient-to-r from-blue-300 via-blue-500 to-blue-800 bg-clip-text text-transparent">
                     Projects
                 </span>
             </h1>

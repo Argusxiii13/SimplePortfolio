@@ -53,7 +53,7 @@ function ProjectDetail() {
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.6, delay: 0.2 }}
-                        className="relative overflow-hidden rounded-2xl border border-gray-700 project-hero bg-gradient-to-br from-blue-600 to-purple-600 shadow-2xl mb-12"
+                        className="relative overflow-hidden rounded-2xl border border-gray-700 project-hero bg-gradient-to-br from-blue-600 to-blue-900 shadow-2xl mb-12"
                     >
                         {project.screenshots && project.screenshots.length > 0 ? (
                             <>

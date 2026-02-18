@@ -5,7 +5,7 @@
 /* Global starry gradient background */
 body {
     margin: 0;
-    background: linear-gradient(to bottom right, #0f172a, #1e3a8a, #581c87);
+    background: linear-gradient(to bottom right, #0a1628, #1e3a8a, #0c2d5a);
     background-attachment: fixed;
     min-height: 100vh;
     position: relative;
