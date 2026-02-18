@@ -82,3 +82,17 @@ body::before {
         text-shadow: none;
     }
 }
+
+/* Breathing glow animation for CTA buttons */
+@keyframes breathe-glow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(37, 99, 235, 0.4), 0 0 40px rgba(37, 99, 235, 0.2);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(37, 99, 235, 0.6), 0 0 60px rgba(37, 99, 235, 0.3), 0 0 80px rgba(37, 99, 235, 0.1);
+    }
+}
+
+.glow-breathe {
+    animation: breathe-glow 3s ease-in-out infinite;
+}

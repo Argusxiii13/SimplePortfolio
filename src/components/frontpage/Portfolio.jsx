@@ -94,14 +94,14 @@ function Portfolio({ onCtaVisibilityChange }) {
                         >
                             <button 
                                 onClick={handleProjectsClick}
-                                className="px-8 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
+                                className="glow-breathe px-8 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
                             >
                                 Projects
                             </button>
                             <a 
                                 href="/files/Esperida_JanierKimAnthony_Resume.pdf"
                                 download
-                                className="px-8 py-3 bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 border-2 border-blue-600 dark:border-blue-400 rounded-lg font-semibold hover:bg-blue-50 dark:hover:bg-gray-700 transition-colors"
+                                className="glow-breathe px-8 py-3 bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 border-2 border-blue-600 dark:border-blue-400 rounded-lg font-semibold hover:bg-blue-50 dark:hover:bg-gray-700 transition-colors"
                             >
                                 Resume
                             </a>
